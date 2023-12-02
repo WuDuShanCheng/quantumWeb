@@ -4,11 +4,10 @@ WORKDIR /data/web
 
 COPY pnpm-lock.yaml .
 COPY package.json .
-
+RUN npm install -g pnpm
 RUN pnpm install
 
 COPY . .
-RUN npm install -g pnpm
 RUN pnpm run build
 
 FROM nginx:alpine as nginx
