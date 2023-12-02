@@ -64,7 +64,7 @@ jobs:
       - name: SSH Command
         uses: D3rHase/ssh-command-action@v0.2.1
         with:
-          HOST: ${{ secrets.SERVER_IP }}
+          HOST: 47.109.101.113
           PORT: 22 
           USER: root
           PRIVATE_SSH_KEY: ${{ secrets.SERVER_KEY }}
