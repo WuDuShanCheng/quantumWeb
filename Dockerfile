@@ -11,6 +11,7 @@ COPY pnpm-lock.yaml .
 COPY package.json .
 
 # 安装依赖，如果上面两个文件没有改动，就不会重现安装依赖。
+RUN npm i -g pnpm
 RUN pnpm install
 
 # 把当前仓库代码拷贝到镜像中
