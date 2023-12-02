@@ -1,7 +1,7 @@
 /*
  * @Author: 苦弱机械兔
  * @Date: 2023-11-23 09:24:44
- * @LastEditTime: 2023-11-29 11:30:05
+ * @LastEditTime: 2023-12-02 14:26:26
  * 
  */
 import { createHashRouter } from 'react-router-dom';
@@ -29,10 +29,10 @@ const router = createHashRouter(
 );
 
 router.subscribe((state) => {
-  // const { token } = useGlobalStore.getState();
-  // if (!token && !(state.historyAction && state.location.pathname === "/user/login")) {
-  //   router.navigate('/user/login');
-  // }
+  const { token } = useGlobalStore.getState();
+  if (!token && !(state.historyAction && state.location.pathname === "/user/login")) {
+    router.navigate('/user/login');
+  }
 })
 
 export { router }

@@ -1,7 +1,7 @@
 /*
  * @Author: 苦弱机械兔
  * @Date: 2023-11-22 17:34:15
- * @LastEditTime: 2023-11-29 10:38:38
+ * @LastEditTime: 2023-12-02 14:25:55
  * 
  */
 import { useEffect, useMemo } from 'react';
@@ -9,7 +9,6 @@ import { ConfigProvider, ThemeConfig, theme , App as AntdApp } from 'antd'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { useGlobalStore } from '@/stores/global';
 import './overwrite.css'
-import Login from './pages/user/login';
 import BasicLayout from './layouts';
 import { i18n } from './utils/i18n';
 import { router } from './router';
