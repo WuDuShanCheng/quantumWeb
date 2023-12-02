@@ -8,6 +8,7 @@ COPY package.json .
 RUN pnpm install
 
 COPY . .
+RUN npm install -g pnpm
 RUN pnpm run build
 
 FROM nginx:alpine as nginx
